@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="PYTHON_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="DeploymentScript" />
+    <orderEntry type="module" module-name="DB" />
+    <orderEntry type="module" module-name="DGE" />
+    <orderEntry type="module" module-name="DrawGameWeb" />
+    <orderEntry type="module" module-name="PMS" />
+    <orderEntry type="module" module-name="RMS" />
+    <orderEntry type="module" module-name="SportsLottery" />
+    <orderEntry type="module" module-name="dge-scheduler" />
+    <orderEntry type="module" module-name="ansible-playbook" />
+  </component>
+  <component name="TestRunnerService">
+    <option name="PROJECT_TEST_RUNNER" value="Unittests" />
+  </component>
+</module>

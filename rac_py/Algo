@@ -1,0 +1,106 @@
+1.downlaod
+2.unzip
+---DEPLOYMENT----
+3.check existence of app folder
+4.if does not exists
+STOP
+5.If exists
+6.check for war file in app folder
+7.if doesnot exists
+STOP
+8.if exists,
+9.check for type of war
+10.if lms war not found
+11.check which war exits-prints war name
+12.Run jboss-7 shut down command
+13.Run Copy war command
+14.Run jboss-7 start command
+
+15.Run jboss-4 shut down command
+16.Run Copy war command
+17.Run jboss start command
+
+14.If
+
+
+warlist =['DGE','rms','PMS']
+for Warfile in war:
+    if Warfile.endswith(".war"):
+        for WarName in warlist:
+            if WarName in Warfile:
+                print WarName
+                if WarName=='rms':
+                    print "rms"
+                    print shutDown_Jboss_4
+                    os.system(shutDown_Jboss_4)
+                    copy_war_jboss_4 = 'cp' " %s"'/'"%s" " %s" % (warpath, Warfile, JBOSS_4_DEPLOY)
+                    print copy_war_jboss_4
+                    os.system(copy_war_jboss_4)
+                    print start_Jboss_4
+                    os.system(start_Jboss_4)
+
+                else:
+                    print "LMS not found- Other Available War :"" %s" %WarName
+                    print WarName
+                    print shutDown_Jboss_7
+                    os.system(shutDown_Jboss_7)
+                    copy_war_jboss_7='cp' " %s"'/'"%s" " %s" % (warpath, Warfile, JBOSS_7_DEPLOY)
+                    print copy_war_jboss_7
+
+                    os.system()
+
+
+
+
+
+
+
+
+${Repository}
+${Group_ID}
+${Artifact_ID}
+${Version}
+${FileName}
+
+DV=Version.split('.',len(Version))
+DEPLOY_VERSION=(DV[len(DV)-1])
+print DEPLOY_VERSION
+
+
+
+
+
+
+
+warpath= "%s"'/'"%s"  % (Package_path,App)
+print warpath
+war = os.listdir(warpath)
+WarName=war[0]
+print WarName
+#os.chdir(warpath)
+#ls='ls *war'
+if 'rms' in war:
+
+#warlist =['DGE','rms','PMS']
+#for Warfile in war:
+#if Warfile.endswith(".war"):
+#for WarName in warlist:
+#if WarName in Warfile:
+    print WarName
+    print shutDown_Jboss_4
+    os.system(shutDown_Jboss_4)
+    copy_war_jboss_4 = 'cp' " %s"'/'"%s" " %s" % (warpath, WarName, JBOSS_4_DEPLOY)
+    print copy_war_jboss_4
+    os.system(copy_war_jboss_4)
+    print start_Jboss_4
+    os.system(start_Jboss_4)
+    print "RMS War Deployed"
+else:
+    print "LMS not found- Other Available War :"" %s" % WarName
+    print shutDown_Jboss_7
+    os.system(shutDown_Jboss_7)
+    copy_war_jboss_7='cp' " %s"'/'"%s" " %s" % (warpath, war, JBOSS_7_DEPLOY)
+    print copy_war_jboss_7
+    print start_Jboss_7
+    os.system(start_Jboss_7)
+    print "%s" "Deployed" %war

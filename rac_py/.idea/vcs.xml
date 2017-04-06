@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="D:/DeploymentScript" vcs="Git" />
+    <mapping directory="D:/Relase/DB" vcs="Git" />
+    <mapping directory="D:/Relase/DGE" vcs="Git" />
+    <mapping directory="D:/Relase/DrawGameWeb" vcs="Git" />
+    <mapping directory="D:/Relase/PMS" vcs="Git" />
+    <mapping directory="D:/Relase/RMS" vcs="Git" />
+    <mapping directory="D:/Relase/SportsLottery" vcs="Git" />
+    <mapping directory="D:/Relase/ansible-playbook" vcs="Git" />
+    <mapping directory="D:/Relase/dge-scheduler" vcs="Git" />
+  </component>
+</project>
